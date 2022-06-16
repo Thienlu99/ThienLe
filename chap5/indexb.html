@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .f {
+            margin: 0 auto;
+            width: 800px;
+        }
+
+        ul li:hover {
+            background-color: #31bda3;
+
+            color: #505958;
+        }
+
+        ul li a:hover {
+            color: #505958;
+            text-decoration: none;
+        }
+
+        ul li a {
+            color: #505958;
+        }
+
+        /* label{
+            font-weight: bold;
+        } */
+        .btn {
+            /* padding: 10px 40px; */
+            font-weight: bold;
+        }
+
+        .vat {
+
+            padding-right: calc(1.5em + 0.75rem);
+            background-image: url(https://banner2.cleanpng.com/20180320/utw/kisspng-percentage-percent-sign-computer-icons-clip-art-get-percentage-png-pictures-5ab10eb7bbeaf4.4507298915215530797697.jpg);
+            background-repeat: no-repeat;
+            background-position: left calc(2.375em + 0.1875rem) center;
+            background-size: calc(0.75em + 0.375rem) calc(0.75em + 0rem);
+        }
+
+        span {
+            color: red;
+        }
+
+        table {
+            border-collapse: collapse;
+            /* border: 1px solid black; */
+            /* display: none; */
+
+        }
+
+        thead {
+            background-color: chartreuse;
+        }
+
+        thead tr th {
+            padding: 20px 40px;
+        }
+        
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        tbody tr td {
+            padding: 10px 10px;
+        }
+
+        tr td {
+            background-color: white;
+            padding: 10px 10px;
+        }
+
+      
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container-fluid" style="background-color: #c9c8c5;">
+        <header class="menu">
+
+            <div class="row">
+                <div class="col-md-5 col-sm-12 col-12 text-light">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <div class="col-md-7 col-sm-12 col-12">
+                    <ul class="d-md-flex justify-content-between list-unstyled" style="line-height: 100px;">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Subdivisions</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li> <a href="">About</a></li>
+                        <li> <a href="Register.html" target="_blank">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+    </div> -->
+    <!-- end menu -->
+    <div class="container-fluid mt-5 ">
+        <div class="container border border-success f">
+            <div class="container Register mt-4">
+                <h3 class="text-primary ">Calculate monthly eletricity bill for customerfa-spin</h3>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form>
+                            <div class="form-group row">
+                                <label for="staticName" class="col-md-3 col-form-label">Name:</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="staticName">
+                                    <span id="startError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="staticAddress" class="col-md-3 col-form-label">Address:</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="staticAddress">
+                                    <span id="startError"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="staticStart" class="col-md-3 col-form-label">Start-up period:</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="staticStart">
+                                    <span id="startError"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="staticEnd" class="col-md-3 col-form-label">End-of-item digits:</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" id="staticEnd">
+                                    <span id="endError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="staticVAT" class="col-md-3 col-form-label">The VAT tax:</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control  vat" id="staticVAT" placeholder="10"
+                                        value="10">
+                                </div>
+                            </div>
+
+                            <!-- end input -->
+                            <div class="form-group row mb-4">
+                                <div class="col-md-6">
+                                    <input type="submit" id="btnCalculate" class="btn btn-primary btn-block"
+                                        value="Calculate amount payable">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="reset" class="btn btn-primary btn-block" value="Clear">
+                                </div>
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end form -->
+        <div class="container mt-5">
+            <h2> Thông tin đã thêm</h2>
+            <div class="row">
+                <div class="col-12">
+                    <table id="addInfoTable" action="">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>Start-up period</th>
+                                <th>End-of-item digits</th>
+                                <th>VAT</th>
+                                <th></th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="container-fluid bg-info" style="height: 150px;">
+        <footer class="container">
+            <p>@ 2023 Tree Valley.All Rights Reservee.</p>
+        </footer>
+
+    </div> -->
+
+
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <!-- <script src="js/tether.min.js"></script> -->
+    <!-- <script src="js/bootstrap.bundle.js"></script> -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/indexb.js"></script>
+</body>
+
+</html>
